@@ -1,0 +1,65 @@
+Description
+EDU University wants to find out, whether class attendance by the students should be made compulsory.  For that, they gave you a dataset, SECTION1.csv  which includes the following attributes in the same order.
+
+["Sno", "Department", "Branch", "Semester", "Course", "RegistrationNo", "StudentName", "Date", "Slot group", "Time", "ClassConducted", "ClassAttended"].
+
+
+But after looking into the data, you reached to a conclusion that it is not in a proper format for analysing.  
+
+You need to manipulate the data and create a dataframe with the following attributes:
+    
+
+[RegistrationNo, Name, Date1, Date2, Date3, …. DateN]
+
+
+    Each row corresponds to the data of a student. The column names of Date1, Date2, Date3.... DateN should be replaced with the unique dates from the dataset. Values under Date1, Date2 … columns should be the total number of classes attended by the student on that date.
+
+
+Input Format
+
+    The first file to read will be SECTION1.csv, which contains the data as mentioned above. This file is in .csv format and is present at the location (/data/training/SECTION1.csv)
+    The second file to read will be testcase.txt present at the location (/data/training/testcase.txt) which contains the following data:
+        First line represents the number of testcase pairs.
+        Followed by a set of RegistrationNo and date pairs. Each element of a pair is on a separate line.
+
+Output Format
+
+    For each pair in the testcase.txt, create an output file, outputn.txt  where n represents the pair number.
+    outputn.txt should be present at the location (/code/outputn.txt) . This file should include RegistrationNo and the attendance value on that particular date.
+
+
+Sample Test Cases
+
+Sample Input
+
+e.g. testcase.txt contains the following data:
+
+3
+16fcs201114
+08/12/18
+16fcs201112
+09/11/18
+16fcs201140
+18/12/18
+
+
+Sample Output
+
+output1.txt contains the following data:
+16fcs201114
+4
+
+output2.txt contains the following data:
+16fcs201112
+2
+
+output3.txt contains the following data:
+16fcs201140
+5
+
+
+Explanation
+
+    Student with Registration Number '16fcs201114' has attended 4 classes on '08/12/18'
+    Student with Registration Number '16fcs201112' has attended 2 classes on '09/11/18'
+    Student with Registration Number '16fcs201140' has attended 5 classes on '18/12/18'
